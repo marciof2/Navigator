@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator/page4.dart';
 
 class Page2 extends StatefulWidget {
   @override
@@ -21,7 +22,8 @@ class _Page2State extends State<Page2> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, 'page4');
+                final parameters = FourParameters('Marcio', 26);
+                Navigator.pushNamed(context, 'page4', arguments: parameters);
               },
               child: Text('Tela Quatro'),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator/page4.dart';
 
 class Page3 extends StatefulWidget {
   @override
@@ -26,7 +27,9 @@ class _Page3State extends State<Page3> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.popAndPushNamed(context, 'page4');
+                final parameters = FourParameters('Leticia', 27);
+                Navigator.popAndPushNamed(context, 'page4',
+                    arguments: parameters);
               },
               child: Text('Replace Tela 4'),
             ),
